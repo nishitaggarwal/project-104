@@ -40,18 +40,30 @@ for i in range(len(file_data)):
 
 data = Counter(new_data)
 mode_data_for_range = {
-                "50-60":0,
-                "60-70":0,
-                "70-80":0
+                "75-85":0,
+                "85-95":0,
+                "95-105":0,
+                "105-115":0,
+                "115-125":0,
+                "125-135":0,
+                "135-145":0
 }
 
-for height,occurence in data.items():
-    if 50<float(height)<60:
-        mode_data_for_range["50-60"] += occurence
-    elif 60<float(height)<70:
-        mode_data_for_range["60-70"] += occurence
-    elif 70<float(height)<80:
-        mode_data_for_range["70-80"] += occurence
+for Weight,occurence in data.items():
+    if 75<float(Weight)<85:
+        mode_data_for_range["75-85"] += occurence
+    elif 85<float(Weight)<95:
+        mode_data_for_range["85-95"] += occurence
+    elif 95<float(Weight)<105:
+        mode_data_for_range["95-105"] += occurence
+    elif 105<float(Weight)<115:
+        mode_data_for_range["105-115"] += occurence
+    elif 115<float(Weight)<125:
+        mode_data_for_range["115-125"] += occurence
+    elif 125<float(Weight)<135:
+        mode_data_for_range["125-135"] += occurence
+    elif 135<float(Weight)<145:
+        mode_data_for_range["135-145"] += occurence
 
 mode_range,mode_occurence = 0,0
 
